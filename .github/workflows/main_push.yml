@@ -6,7 +6,7 @@ jobs:
     name: Hello world action 1
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: ./.github/actions/action_a
         with:
           MY_NAMES: "Rikard"
@@ -19,7 +19,7 @@ jobs:
     name: Hello world action 2
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: ./.github/actions/action_a
         with:
           MY_NAMES: "Rikard"
@@ -28,13 +28,20 @@ jobs:
         with:
           MY_NAME: "Mona-Lisa"
 
-  installpython:
+  runcodeonazureml:
     name: Install python libraries from requirements.txt
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Install dependencies 
       run: |
         python -m pip install --upgrade pip
         pip install -r .github/requirements.txt
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+    - name: Test with pytest
+      id: test_code
+      run: |
+        bash az_login.sh
+        pytest
+      env:
+        AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
