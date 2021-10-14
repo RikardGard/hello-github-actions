@@ -7,10 +7,10 @@ inputs:
     description: "Who to greet"
     required: true
     default: "World"
-  MY_occu:
-    description: "Who to greet"
+  MY_OCCU:
+    description: "Who to greets"
     required: true
-    default: "World"
+    default: "Worlds"
 
 runs:
   using: "docker"

@@ -10,7 +10,7 @@ jobs:
       - uses: ./Actions/action_a
         with:
           MY_NAMES: "Rikard"
-          MY_occu: "Data Scientist"
+          MY_OCCU: "Data Scientist"
       - uses: ./Actions/action_b
         with:
           MY_NAME: "Mona-Lisa"
