@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./Actions/action_a
         with:
-          MY_NAME: "Rikard"
-          MY_occy: "Data Scientist"
+          MY_NAMES: "Rikard"
+          MY_occu: "Data Scientist"
       - uses: ./Actions/action_b
         with:
           MY_NAME: "Mona-Lisa"
