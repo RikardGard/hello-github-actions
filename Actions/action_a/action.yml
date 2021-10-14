@@ -3,7 +3,11 @@ description: "Greet someone"
 author: "octocat@github.com"
 
 inputs:
-  MY_NAME:
+  MY_NAMES:
+    description: "Who to greet"
+    required: true
+    default: "World"
+  MY_occu:
     description: "Who to greet"
     required: true
     default: "World"

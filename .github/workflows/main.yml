@@ -10,6 +10,7 @@ jobs:
       - uses: ./Actions/action_a
         with:
           MY_NAME: "Rikard"
+          MY_occy: "Data Scientist"
       - uses: ./Actions/action_b
         with:
           MY_NAME: "Mona-Lisa"
