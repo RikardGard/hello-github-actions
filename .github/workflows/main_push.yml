@@ -41,7 +41,7 @@ jobs:
     - name: login to azure
       id: login_id
       run: |
-        bash az_login.sh
+        bash .github/az_login.sh
       env:
         AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
              
