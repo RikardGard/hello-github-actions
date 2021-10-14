@@ -14,8 +14,8 @@ jobs:
       - uses: ./.github/actions/action_b
         with:
           MY_NAME: "Mona-Lisa"
-          
-  build1:    
+
+  rikardtest:    
     name: Hello world action 2
     runs-on: ubuntu-latest
     steps:
