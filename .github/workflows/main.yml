@@ -10,3 +10,13 @@ jobs:
       - uses: ./Actions/action_a
         with:
           MY_NAME: "Rikard"
+
+jobs:
+  build:
+    name: Hello world action temp2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./Actions/action_b
+        with:
+          MY_NAME: "Mona-Lisa"
