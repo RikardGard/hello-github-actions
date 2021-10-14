@@ -14,3 +14,16 @@ jobs:
       - uses: ./.github/actions/action_b
         with:
           MY_NAME: "Mona-Lisa"
+          
+  build1:    
+    name: Hello world action 2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./.github/actions/action_a
+        with:
+          MY_NAMES: "Rikard"
+          MY_OCCU: "Data Scientist"
+      - uses: ./.github/actions/action_b
+        with:
+          MY_NAME: "Mona-Lisa"
