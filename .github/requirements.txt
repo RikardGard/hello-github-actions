@@ -1,2 +1,8 @@
 pandas
 numpy
+azureml-sdk
+azure-cosmos
+azureml-pipeline
+omegaconf
+azure-storage-blob
+pytest
